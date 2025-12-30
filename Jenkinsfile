@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = "mofiz-mizu/multibranch-flask-app"
-        GIT_USER   = "mofizmizu"
+        IMAGE_NAME = "haquemofiz/multibranch-flask-app"
+        GIT_USER   = "mofiz-mizu"
         GIT_EMAIL  = "haquemizu@gmail.com"
     }
 
