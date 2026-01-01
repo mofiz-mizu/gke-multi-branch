@@ -30,6 +30,11 @@ pipeline {
                         usernameVariable: 'DOCKER_USER',
                         passwordVariable: 'DOCKER_PASS'
                     )]) {
+                        sh '''
+                          echo "Current Directory: $(pwd)"
+                          echo "Listing all files recursively:"
+                          ls -R
+                        '''
                         sh """
                         docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
                         echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
